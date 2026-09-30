@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eyescord — See everything Discord hides</title>
+  <meta name="description" content="Eyescord is a Discord client mod for Windows. Deleted messages stay, edits keep their history, hidden channels show up — plus hundreds more plugins, installed in one click.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="Eyescord — See everything Discord hides">
+  <meta property="og:description" content="A Discord client mod for Windows with 368 plugins. One click to install, one click to undo.">
+  <meta property="og:image" content="assets/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="assets/img/icon-32.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" data-nav>
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html" aria-label="Eyescord home">
+        <img src="assets/img/logo.png" alt="" width="34" height="29">
+        Eyescord
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Main">
+        <a href="plugins.html">Plugins</a>
+        <a href="download.html">Download</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://discord.gg/jRjx92KPXh" data-bind-href="discord" target="_blank" rel="noopener">Discord</a>
+        <a class="nav-links-cta btn btn-primary" href="download.html">Download</a>
+      </nav>
+      <a class="btn btn-primary btn-sm nav-cta" href="download.html">
+        Download <span class="ver" data-bind="version-tag"></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu" data-nav-toggle>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap">
+        <h1 class="display hero-title">See everything Discord hides.</h1>
+
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="lede">
+              Eyescord is a mod for the Discord desktop app. Deleted messages stay on screen,
+              edits keep their history, and locked channels show up in the list. Those are
+              three of its <span data-bind="count">368</span> plugins.
+            </p>
+            <div class="hero-ctas">
+              <a class="btn btn-primary btn-lg" href="download.html" data-download>
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.1 10.4 4v7.3H3V5.1Zm0 13.8 7.4 1.1v-7.2H3v6.1Zm8.2 1.2L21 21.5v-8.7h-9.8v7.3Zm0-16.2v7.4H21V2.5l-9.8 1.4Z"/></svg>
+                Download for Windows
+              </a>
+              <a class="btn btn-ghost btn-lg" href="plugins.html">Browse plugins</a>
+            </div>
+            <p class="os-note" data-os-note hidden></p>
+            <div class="hero-facts">
+              <span>Version <strong data-bind="version">1.0.4</strong>, installer <span data-bind="size">53 MB</span></span>
+              <span>Works with Discord Stable, PTB and Canary</span>
+            </div>
+          </div>
+
+          <div class="demo" data-demo>
+            <div class="demo-bar">
+              <span class="demo-bar-label" id="demo-label">The same chat, two ways</span>
+              <div class="seg" role="group" aria-labelledby="demo-label">
+                <button type="button" data-mode="stock" aria-pressed="false">Stock Discord</button>
+                <button type="button" data-mode="eyes" aria-pressed="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+                  Eyescord
+                </button>
+              </div>
+            </div>
+
+            <div class="window eyes" data-window aria-hidden="true">
+              <div class="win-title">
+                <span>Discord</span>
+                <span class="wc">
+                  <span><svg viewBox="0 0 10 10"><path d="M1 5h8"/></svg></span>
+                  <span><svg viewBox="0 0 10 10" fill="none"><rect x="1" y="1" width="8" height="8"/></svg></span>
+                  <span><svg viewBox="0 0 10 10"><path d="m1 1 8 8M9 1 1 9"/></svg></span>
+                </span>
+              </div>
+              <div class="win-body">
+                <div class="rail">
+                  <i>DM</i>
+                  <hr>
+                  <i class="is-active">NO</i>
+                  <i>VL</i>
+                  <i>FN</i>
+                  <i>+</i>
+                </div>
+                <div class="side">
+                  <div class="side-head">night owls</div>
+                  <div class="side-cat">Text channels</div>
+                  <div class="chan is-active"><b>#</b>general</div>
+                  <div class="chan"><b>#</b>clips</div>
+                  <div class="chan"><b>#</b>memes</div>
+                  <div class="chan-hidden">
+                    <div class="chan">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+                      mod-chat
+                      <span class="tag">hidden</span>
+                    </div>
+                  </div>
+                  <div class="side-cat">Voice</div>
+                  <div class="chan"><b>
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11 5 6 9H2v6h4l5 4V5Zm4.5 3.5a5 5 0 0 1 0 7l-1.4-1.4a3 3 0 0 0 0-4.2l1.4-1.4Z"/></svg></b>Lobby</div>
+                  <div class="vc-users">
+                    <span><i></i>maya</span>
+                    <span><i></i>dan</span>
+                  </div>
+                </div>
+                <div class="chat">
+                  <div class="chat-head"><b>#</b>general</div>
+                  <div class="msgs" data-msgs>
+                    <!-- Final state, for anyone without JavaScript. The demo script replays it. -->
+                    <div class="msg"><span class="av v3">M</span><div class="who"><strong>maya</strong><time>Today at 9:41 PM</time></div><div class="text">need a 5th for ranked tonight</div></div>
+                    <div class="msg was-edited"><span class="av v2">D</span><div class="who"><strong>dan</strong><time>Today at 9:41 PM</time></div><div class="before"><s>me. 9pm</s></div><div class="text">me. 10pm, dinner first<span class="edited">(edited)</span></div></div>
+                    <div class="msg is-deleted"><span class="av">N</span><div class="who"><strong>noam</strong><time>Today at 9:42 PM</time></div><div class="text">ok confession, i'm hardstuck silver<span class="flag">deleted</span></div></div>
+                    <div class="msg"><span class="av v3">M</span><div class="who"><strong>maya</strong><time>Today at 9:42 PM</time></div><div class="text">noam we all saw that</div></div>
+                  </div>
+                  <div>
+                    <div class="typing" data-typing hidden></div>
+                    <div class="composer">Message #general<span class="caret"></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="demo-foot">
+              <p class="demo-caption" data-caption aria-live="polite">
+                <strong>With Eyescord</strong> you still see noam's deleted message, what dan's edit replaced,
+                and that #mod-chat exists, even though you can't open it.
+              </p>
+              <button class="replay" type="button" data-replay hidden>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+                Replay
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plugins -->
+    <section class="band on-white" aria-labelledby="plugins-title">
+      <div class="wrap">
+        <div class="band-head">
+          <h2 class="h2" id="plugins-title"><span data-bind="count">368</span> plugins. Every one is a switch.</h2>
+          <div class="band-side">
+            <p class="lede">
+              You get the full Vencord and Equicord catalog, plus <span data-bind="exclusive">93</span> plugins
+              that only exist in Eyescord. Turn on what you want in Settings. Everything else stays off.
+            </p>
+            <a class="btn btn-primary" href="plugins.html">Browse all plugins</a>
+          </div>
+        </div>
+
+        <h3 class="h3 grid-title">A few that are Eyescord's own</h3>
+        <div class="pgrid">
+          <article class="pcard">
+            <div class="pcard-top"><h3>MessageLoggerEnhanced</h3><button class="switch" role="switch" aria-checked="true" aria-label="MessageLoggerEnhanced"></button></div>
+            <p>Keeps deleted messages on screen, with the full history of every edit and ghost-ping detection.</p>
+          </article>
+          <article class="pcard">
+            <div class="pcard-top"><h3>ShowHiddenChannels</h3><button class="switch" role="switch" aria-checked="true" aria-label="ShowHiddenChannels"></button></div>
+            <p>Lists the channels you don't have access to, so you know what's there.</p>
+          </article>
+          <article class="pcard">
+            <div class="pcard-top"><h3>VolumeBooster</h3><button class="switch" role="switch" aria-checked="true" aria-label="VolumeBooster"></button></div>
+            <p>Push a user's or a stream's volume past Discord's maximum.</p>
+          </article>
+          <article class="pcard">
+            <div class="pcard-top"><h3>PrevNames</h3><button class="switch" role="switch" aria-checked="false" aria-label="PrevNames"></button></div>
+            <p>Right-click anyone to see every username they've had.</p>
+          </article>
+          <article class="pcard">
+            <div class="pcard-top"><h3>StreamProof</h3><button class="switch" role="switch" aria-checked="false" aria-label="StreamProof"></button></div>
+            <p>Hides your messages, DMs, links and images while you share your screen. Voice and the stream grid stay visible.</p>
+          </article>
+          <article class="pcard">
+            <div class="pcard-top"><h3>WhosWatching</h3><button class="switch" role="switch" aria-checked="false" aria-label="WhosWatching"></button></div>
+            <p>Hover the screen share icon to see who is watching your stream.</p>
+          </article>
+        </div>
+
+        <div class="browse-tags">
+          <h3 class="h3">Browse by what they do</h3>
+          <div class="chips" data-tag-chips>
+            <a class="chip" href="plugins.html">All plugins</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Install -->
+    <section class="band" aria-labelledby="install-title">
+      <div class="wrap">
+        <div class="band-head">
+          <h2 class="h2" id="install-title">Installed in a minute. Removed in one click.</h2>
+          <p class="lede">The installer finds Discord on your PC, patches it, and keeps a way back to stock.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step-n">1</span>
+            <h3 class="h3">Download the installer</h3>
+            <p>
+              <a class="link" href="download.html" data-download>Eyescord-Installer.exe</a>, <span data-bind="size">53 MB</span>.
+              Windows may warn you that the file isn't signed. Click <em>More info</em>, then <em>Run anyway</em>.
+            </p>
+          </li>
+          <li class="step">
+            <span class="step-n">2</span>
+            <h3 class="h3">Choose your Discord</h3>
+            <p>Stable, PTB or Canary. The installer finds every version on your PC and patches the one you pick.</p>
+          </li>
+          <li class="step">
+            <span class="step-n">3</span>
+            <h3 class="h3">Restart Discord</h3>
+            <p>Open Settings. Eyescord has its own section there, with every plugin ready to switch on.</p>
+          </li>
+        </ol>
+
+        <div class="after-install">
+          <div>
+            <h3 class="h3">Discord updated and Eyescord is gone?</h3>
+            <p>Discord's updates replace the files Eyescord patches. Run the installer again and choose <strong>Repair</strong>.</p>
+          </div>
+          <div>
+            <h3 class="h3">Want stock Discord back?</h3>
+            <p>Run the installer and choose <strong>Uninstall</strong>. Discord goes back to stock.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="band band-rule" id="faq" aria-labelledby="faq-title">
+      <div class="wrap faq-grid">
+        <div class="faq-aside">
+          <h2 class="h2" id="faq-title">Questions</h2>
+          <p class="muted">Didn't find yours? Ask in the Eyescord Discord server.</p>
+          <div><a class="btn btn-ghost" href="https://discord.gg/jRjx92KPXh" data-bind-href="discord" target="_blank" rel="noopener">Join the Discord</a></div>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>Can my account get banned?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <div class="answer">
+              <p>Any client mod breaks Discord's Terms of Service, so there's always some risk.</p>
+              <p>Plugins that only change what <em>you</em> see are hard for Discord to notice. Plugins that send messages or act for you, like mass DMs, auto-replies or floods, look like spam, and spam is what gets accounts flagged. Use those carefully.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Discord updated and Eyescord disappeared.<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <div class="answer">
+              <p>That's normal. Each Discord update replaces the files Eyescord patches. Run the installer again and choose <strong>Repair</strong>.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Does it work on macOS, Linux or in the browser?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <div class="answer">
+              <p>Not yet. The installer supports the Discord desktop app on Windows 10 and 11.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Is there a mobile version?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <div class="answer">
+              <p>No. Discord's iOS and Android apps can't be modded the way the desktop app can.</p>
+            </div>
+          </details>
+          <details>
+            <summary>How is Eyescord related to Vencord and Equicord?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <div class="answer">
+              <p>Eyescord is built on Equicord, which is built on Vencord. Most of the plugin catalog comes from those two projects, and we're grateful for it.</p>
+              <p>The <span data-bind="exclusive">93</span> plugins marked <strong>Eyescord</strong> in the <a class="link" href="plugins.html?source=eyescord">catalog</a> are our own.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Discord feels slower since I installed it.<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <div class="answer">
+              <p>Every plugin you turn on runs inside Discord. Turn off the ones you don't use. If the slowdown started right after you enabled a plugin, switch that one off first.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final call -->
+    <section class="band on-white final" aria-labelledby="final-title">
+      <div class="wrap final-inner">
+        <img class="final-icon" src="assets/img/icon-512.png" alt="" width="512" height="512" loading="lazy">
+        <h2 class="display" id="final-title">See it for yourself.</h2>
+        <div class="hero-ctas">
+          <a class="btn btn-primary btn-lg" href="download.html" data-download>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.1 10.4 4v7.3H3V5.1Zm0 13.8 7.4 1.1v-7.2H3v6.1Zm8.2 1.2L21 21.5v-8.7h-9.8v7.3Zm0-16.2v7.4H21V2.5l-9.8 1.4Z"/></svg>
+            Download for Windows
+          </a>
+          <a class="btn btn-ghost btn-lg" href="https://discord.gg/jRjx92KPXh" data-bind-href="discord" target="_blank" rel="noopener">Join the Discord</a>
+        </div>
+        <p class="muted small">Version <span data-bind="version">1.0.4</span>. Uninstall it any time from the same installer.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/img/logo.png" alt="" width="34" height="29">Eyescord</a>
+        <p>A Discord client mod built on Equicord and Vencord. Not affiliated with Discord Inc.</p>
+      </div>
+      <div>
+        <h2>Eyescord</h2>
+        <ul>
+          <li><a href="plugins.html">Plugins</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Community</h2>
+        <ul>
+          <li><a href="https://discord.gg/jRjx92KPXh" data-bind-href="discord" target="_blank" rel="noopener">Discord server</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+  <script src="assets/data/site-data.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/demo.js"></script>
+</body>
+</html>

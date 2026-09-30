@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plugins — Eyescord</title>
+  <meta name="description" content="Every plugin that ships with Eyescord: the Vencord and Equicord catalog plus plugins that only exist in Eyescord.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="Eyescord plugins">
+  <meta property="og:description" content="Search every plugin that ships with Eyescord.">
+  <meta property="og:image" content="assets/img/og.png">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="assets/img/icon-32.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" data-nav>
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html" aria-label="Eyescord home">
+        <img src="assets/img/logo.png" alt="" width="34" height="29">
+        Eyescord
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Main">
+        <a href="plugins.html">Plugins</a>
+        <a href="download.html">Download</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="https://discord.gg/jRjx92KPXh" data-bind-href="discord" target="_blank" rel="noopener">Discord</a>
+        <a class="nav-links-cta btn btn-primary" href="download.html">Download</a>
+      </nav>
+      <a class="btn btn-primary btn-sm nav-cta" href="download.html">
+        Download <span class="ver" data-bind="version-tag"></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu" data-nav-toggle>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="catalog">
+    <div class="wrap">
+      <header class="page-head">
+        <h1 class="display">Plugins</h1>
+        <p class="lede">
+          <span data-bind="count">368</span> plugins ship with Eyescord.
+          <span data-bind="exclusive">93</span> of them are Eyescord's own; the rest come from Vencord and Equicord.
+          Switch any of them on under Settings, Eyescord, Plugins.
+        </p>
+      </header>
+
+      <div class="toolbar" role="search">
+        <div class="toolbar-row">
+          <label class="search">
+            <span class="visually-hidden">Search plugins</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input type="search" placeholder="Search by name or what it does" autocomplete="off" spellcheck="false" data-q>
+            <kbd aria-hidden="true">/</kbd>
+          </label>
+          <div class="seg" role="group" aria-label="Where the plugin comes from">
+            <button type="button" data-source="all" aria-pressed="true">All</button>
+            <button type="button" data-source="eyescord" aria-pressed="false">Eyescord only</button>
+            <button type="button" data-source="upstream" aria-pressed="false">Vencord &amp; Equicord</button>
+          </div>
+          <p class="result-count" data-count aria-live="polite"></p>
+        </div>
+      </div>
+      <div class="chips" role="group" aria-label="Filter by category" data-tags></div>
+
+      <div class="pgrid" data-grid></div>
+
+      <div class="empty" data-empty hidden>
+        <h2 class="h3" data-empty-title>No plugins match.</h2>
+        <p class="muted">Try a shorter word, or search by what the plugin does, like “voice” or “deleted”.</p>
+        <button class="btn btn-ghost btn-sm" type="button" data-clear>Clear search and filters</button>
+      </div>
+
+      <noscript><p class="muted">The catalog needs JavaScript to load.</p></noscript>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/img/logo.png" alt="" width="34" height="29">Eyescord</a>
+        <p>A Discord client mod built on Equicord and Vencord. Not affiliated with Discord Inc.</p>
+      </div>
+      <div>
+        <h2>Eyescord</h2>
+        <ul>
+          <li><a href="plugins.html">Plugins</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Community</h2>
+        <ul>
+          <li><a href="https://discord.gg/jRjx92KPXh" data-bind-href="discord" target="_blank" rel="noopener">Discord server</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+  <script src="assets/data/site-data.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script src="assets/js/plugins.js"></script>
+</body>
+</html>

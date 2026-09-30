@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Download — Eyescord</title>
+  <meta name="description" content="Download the Eyescord installer for Discord on Windows 10 and 11.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="Download Eyescord">
+  <meta property="og:description" content="The Eyescord installer for Discord on Windows.">
+  <meta property="og:image" content="assets/img/og.png">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="assets/img/icon-32.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" data-nav>
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html" aria-label="Eyescord home">
+        <img src="assets/img/logo.png" alt="" width="34" height="29">
+        Eyescord
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Main">
+        <a href="plugins.html">Plugins</a>
+        <a href="download.html">Download</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="https://discord.gg/jRjx92KPXh" data-bind-href="discord" target="_blank" rel="noopener">Discord</a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu" data-nav-toggle>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="dl-page">
+    <div class="wrap">
+      <header class="page-head">
+        <h1 class="display">Download</h1>
+        <p class="lede">Eyescord for the Discord desktop app on Windows 10 and 11.</p>
+      </header>
+
+      <div class="dl-grid">
+        <aside class="dl-card" aria-label="Installer">
+          <a class="btn btn-primary btn-lg" href="#" data-download data-dl-button>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.1 10.4 4v7.3H3V5.1Zm0 13.8 7.4 1.1v-7.2H3v6.1Zm8.2 1.2L21 21.5v-8.7h-9.8v7.3Zm0-16.2v7.4H21V2.5l-9.8 1.4Z"/></svg>
+            Download for Windows
+          </a>
+          <p class="os-note" data-os-note hidden></p>
+
+          <dl class="facts">
+            <dt>Eyescord</dt><dd>Version <span data-bind="version">1.0.4</span></dd>
+            <dt>Installer</dt><dd>Version <span data-bind="installer-version">1.3.0</span></dd>
+            <dt>File</dt><dd data-bind="file">Eyescord-Installer.exe</dd>
+            <dt>Size</dt><dd data-bind="size">53.3 MB</dd>
+            <dt>Works with</dt><dd>Discord Stable, PTB and Canary</dd>
+          </dl>
+
+          <div class="hash">
+            <span class="small muted" id="sha-label">SHA-256 of the installer</span>
+            <div class="hash-row">
+              <code id="sha" data-bind="sha256" aria-labelledby="sha-label">—</code>
+              <button class="btn btn-ghost btn-sm" type="button" data-copy="sha" data-copied="Hash copied">Copy</button>
+            </div>
+          </div>
+        </aside>
+
+        <div class="dl-sections">
+          <section class="prose" aria-labelledby="install-h">
+            <h2 class="h2" id="install-h">Install</h2>
+            <ol>
+              <li><span>Close Discord completely, including the icon in the system tray.</span></li>
+              <li><span>Open <strong data-bind="file">Eyescord-Installer.exe</strong>.</span></li>
+              <li><span>Choose <strong>Install</strong>, then pick the Discord you use: Stable, PTB or Canary.</span></li>
+              <li><span>When it finishes, open Discord. Eyescord has its own section in Settings.</span></li>
+            </ol>
+          </section>
+
+          <div class="callout">
+            <h3 class="h3">“Windows protected your PC”</h3>
+            <p>
+              The installer isn't code-signed yet, so SmartScreen shows this warning the first time.
+              Click <strong>More info</strong>, then <strong>Run anyway</strong>. If you want to be sure the file is the one
+              we published, compare its hash with the one on this page:
+            </p>
+            <code class="code">Get-FileHash .\Eyescord-Installer.exe</code>
+          </div>
+
+          <section class="prose" aria-labelledby="repair-h">
+            <h2 class="h3" id="repair-h">After a Discord update</h2>
+            <p>Discord's updates replace the files Eyescord patches, so Eyescord can vanish after one. Open the installer again and choose <strong>Repair</strong>.</p>
+          </section>
+
+          <section class="prose" aria-labelledby="remove-h">
+            <h2 class="h3" id="remove-h">Uninstall</h2>
+            <p>Open the installer and choose <strong>Uninstall</strong>. Discord goes back to stock.</p>
+          </section>
+
+          <section class="prose" aria-labelledby="help-h">
+            <h2 class="h3" id="help-h">Stuck?</h2>
+            <p>Check the <a class="link" href="index.html#faq">questions</a>, or ask in the <a class="link" href="https://discord.gg/jRjx92KPXh" data-bind-href="discord" target="_blank" rel="noopener">Eyescord Discord server</a>.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/img/logo.png" alt="" width="34" height="29">Eyescord</a>
+        <p>A Discord client mod built on Equicord and Vencord. Not affiliated with Discord Inc.</p>
+      </div>
+      <div>
+        <h2>Eyescord</h2>
+        <ul>
+          <li><a href="plugins.html">Plugins</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Community</h2>
+        <ul>
+          <li><a href="https://discord.gg/jRjx92KPXh" data-bind-href="discord" target="_blank" rel="noopener">Discord server</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+
+  <script src="assets/data/site-data.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
